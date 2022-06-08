@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/teams', to: "teams#show"
+  get '/teams', to: "teams#index"
   get 'teams/new'
   root 'pages#home'
   devise_for :users

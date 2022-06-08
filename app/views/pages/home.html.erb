@@ -3,6 +3,7 @@
       <% if current_user.admin?%>
         <h1>hello <%= current_user.email %></h1>
         <p>you are <%= current_user.role %></p>
+        <p>Create a Team: <%= link_to "Create", new_team_path%></p>
 
 
 
