@@ -1,0 +1,19 @@
+<%= form_with model: project do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "Project Name" %>
+     <% project.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autofocus: true, autocomplete: "Description" %>
+     <% project.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

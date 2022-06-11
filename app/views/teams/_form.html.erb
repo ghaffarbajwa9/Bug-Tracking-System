@@ -1,0 +1,21 @@
+<%= form_with model: team do |f| %>
+ <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+     <% team.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     <% team.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
